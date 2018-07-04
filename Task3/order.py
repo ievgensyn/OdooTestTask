@@ -11,5 +11,4 @@ def sum_total(numList):
     else:
         return numList[0] + sum_total(numList[1:])
 
-print vat
-print sum_total(sum_item) / vat
+print sum_total(sum_item)
