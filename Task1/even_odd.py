@@ -7,3 +7,10 @@ def even_odd(x):
         return 'Odd'
 
 print even_odd(x)
+
+
+'''
+without function:
+x = int(input("Enter a number: "))
+print "Even" if x % 2 == 0 else "Odd"
+'''

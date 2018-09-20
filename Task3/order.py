@@ -1,9 +1,13 @@
-vat = float(raw_input('Enter the VAT: '))
+vat = float(raw_input('Enter the VAT: ')) / 100
 a = {397.01:1, 435.0:2, 435.0:2, 443.33:2, 443.33:2, 370.0:2, 630.0:1, 630.0:1, 630.0:2}
-#b = [[i, a[i]] for i in a]
+b = [[i, a[i]] for i in a]
+print b, len(a)
 
-sum_item = [i * a[i] for i in a]
-print sum_item
+v = a.keys()
+print v
+
+sum_items = [i * a[i] for i in range(len(a))]
+print sum_items
 
 def sum_total(numList):
     if len(numList) == 1:
@@ -11,4 +15,8 @@ def sum_total(numList):
     else:
         return numList[0] + sum_total(numList[1:])
 
-print sum_total(sum_item)
+print sum_total(sum_items) * vat
+print vat
+
+vat_sum = [i * vat for i in sum_item]
+print vat_sum
